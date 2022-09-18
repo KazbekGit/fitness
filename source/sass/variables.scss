@@ -8,6 +8,7 @@ $color-default-white:               #ffffff;
 $color-transparent:                 rgba(255, 255, 255, 0);
 $color-venetian-red:                #B80027;
 $color-dark-cerulean:               #003D85;
+$color-sapphire:                    #102654;
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
@@ -53,6 +54,8 @@ $vp-768:                            768px;
 $vp-1024:                           1024px;
 $vp-1200:                           1200px;
 $vp-1280:                           1280px;
+$vp-1365:                           1365px;
+$vp-1366:                           1366px;
 $vp-1440:                           1440px;
 $vp-1920:                           1920px;
 
@@ -65,5 +68,5 @@ $retina-dppx:                       1.5dppx;
 // width
 // ---------------------------------
 
-$max-width:                         1920px;
+$max-width:                         1366px;
 $min-width:                         320px;

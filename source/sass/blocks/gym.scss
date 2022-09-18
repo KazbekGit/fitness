@@ -1,0 +1,298 @@
+.gym {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include vp-1199 {
+    padding-top: 100px;
+    padding-bottom: 183px;
+  }
+
+  @include vp-767 {
+    padding-top: 75px;
+    padding-bottom: 70px;
+  }
+}
+
+.gym__container {
+  display: flex;
+  flex-wrap: wrap;
+
+  user-select: none;
+
+  @include vp-1365 {
+    justify-content: space-around;
+    padding-left: 41px;
+    padding-right: 41px;
+  }
+
+  @include vp-1199 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include vp-767 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.subscription {
+  height: 300px;
+  background-color: rgb(218, 113, 113);
+}
+
+.gym__text {
+  flex-basis: 355px;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-right: 22px;
+  margin-left: 43px;
+  margin-top: 50px;
+
+  font-family: $ff-roboto;
+
+  @include vp-1365 {
+    margin-left: 0;
+  }
+
+  @include vp-1199 {
+    flex-basis: auto;
+
+    align-items: center;
+
+    margin-top: 0;
+    margin-right: 0;
+    padding-left: 76px;
+    padding-right: 76px;
+  }
+
+  @include vp-767 {
+    align-items: flex-start;
+
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.gym__title {
+  margin-bottom: 9px;
+
+  font-family: $ff-bebas;
+  font-weight: 700;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+
+  color: $color-sapphire;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 42px;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+  }
+}
+
+.gym__subtitle {
+  margin-bottom: 36px;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  @include vp-767 {
+    margin-bottom: 22px;
+  }
+}
+
+.gym__paragraph {
+  margin: 0;
+  padding: 0;
+
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  @include vp-1199 {
+    text-align: center;
+  }
+
+  @include vp-767 {
+    text-align: left;
+  }
+
+  &--first {
+    margin-bottom: 10px;
+
+    @include vp-1199 {
+      margin-bottom: 43px;
+    }
+
+    @include vp-767 {
+      padding-right: 29px;
+      margin-bottom: 33px;
+    }
+  }
+
+  &--second {
+    @include vp-1199 {
+      display: none;
+    }
+  }
+}
+
+.gym__media {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 30px;
+
+  width: 723px;
+  min-height: 516px;
+
+  @include vp-1199 {
+    width: 100%;
+    min-height: auto;
+
+    align-items: center;
+  }
+
+  @include vp-767 {
+    gap: 0;
+  }
+}
+
+.gym picture {
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
+.gym__img {
+
+  @include vp-1199 {
+    width: 100%;
+    height: 345px;
+
+    object-fit: cover;
+  }
+
+  @include vp-767 {
+    height: 313px;
+
+    margin-bottom: 40px;
+  }
+}
+
+.gym__video {
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  @include vp-1199 {
+    left: 50%;
+    bottom: -83px;
+    transform: translate(-50%);
+  }
+
+  @include vp-767 {
+    width: 100%;
+    position: static;
+
+    transform: translate(0, 0);
+  }
+}
+
+.gym__iframe-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.gym__video-screen {
+  @include vp-1199 {
+    width: 266px;
+    height: 167px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+
+    object-fit: cover;
+  }
+}
+
+.gym__play-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 72px;
+  height: 72px;
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  background: linear-gradient(44.89deg, $color-dark-cerulean 25.38%, $color-venetian-red 74.89%);
+
+  @include vp-1199 {
+    width: 52px;
+    height: 52px;
+  }
+
+  @include vp-767 {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+.gym__play-button::before {
+  position: absolute;
+  content: url('../img/button-offset.svg');
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  @include vp-1199 {
+    content: url('../img/button-offset-tablet.svg');
+    top: 55%;
+  }
+}
+
+.gym__play-button::after {
+  position: absolute;
+  content: url('../img/button-arrow.svg');
+  left: 54%;
+  top: 54%;
+
+  transform: translate(-50%, -50%);
+
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+}
+
+
+
+
