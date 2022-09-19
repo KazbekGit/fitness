@@ -455,6 +455,7 @@ html {
   line-height: 24px;
   font-family: "Placeholder", "Arial", sans-serif;
   color: #000000;
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -578,6 +579,10 @@ button,
   appearance: none;
 }
 
+ul {
+  list-style: none;
+}
+
 ul,
 p,
 h1,
@@ -621,8 +626,10 @@ body main {
   font-family: "Rouble", "Arial", sans-serif;
   /* stylelint-disable */
   text-transform: lowercase !important;
-  font-weight: 400 !important;
+  font-weight: 600 !important;
   /* stylelint-enable */
+  font-size: 60px;
+  color: #102654;
 }
 
 .visually-hidden {
@@ -679,7 +686,7 @@ body main {
   -ms-user-select: none;
   user-select: none;
   color: #ffffff;
-  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
 }
 
 .main-block__header {
@@ -857,11 +864,6 @@ body main {
   user-select: none;
 }
 
-.subscription {
-  height: 300px;
-  background-color: #da7171;
-}
-
 .gym__text {
   -ms-flex-preferred-size: 355px;
   flex-basis: 355px;
@@ -953,8 +955,8 @@ body main {
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  background: -o-linear-gradient(45.11deg, #003D85 25.38%, #B80027 74.89%);
-  background: linear-gradient(44.89deg, #003D85 25.38%, #B80027 74.89%);
+  background: -o-linear-gradient(45.11deg, #003d85 25.38%, #b80027 74.89%);
+  background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
 }
 
 .gym__play-button::before {
@@ -978,6 +980,170 @@ body main {
   border-right-color: transparent;
   border-bottom-color: transparent;
   border-top-color: transparent;
+}
+
+.subscription {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: #f8f9fc;
+}
+
+.subscription__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.subscription__header {
+  margin-bottom: 50px;
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  color: #102654;
+}
+
+.subscription__tabs-list {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.subscription__tabs-list::after {
+  position: absolute;
+  content: "";
+  bottom: 20px;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+  border-bottom: 2px solid grey;
+}
+
+.subscription__tabs-item {
+  margin-right: 46px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: rgba(16, 38, 84, 0.5);
+}
+
+.subscription__tabs-item:last-child {
+  margin-right: 0;
+}
+
+.subscription__tabs-item--active {
+  z-index: 2;
+  color: #102654;
+  border-bottom: 2px solid #d10a42;
+}
+
+.subscription__cards-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+}
+
+.subscription__cards-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 65px 73px;
+  margin-right: 36px;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+}
+
+.subscription__cards-item:last-child {
+  margin-right: 0;
+}
+
+.subscription__cards-item--active {
+  border: 7px solid;
+  padding: 60px 70px;
+  -o-border-image: -o-linear-gradient(top left, #d10a42 30%, #00359f 51%) 30;
+  border-image: -webkit-gradient(linear, left top, right bottom, color-stop(30%, #d10a42), color-stop(51%, #00359f)) 30;
+  border-image: linear-gradient(to bottom right, #d10a42 30%, #00359f 51%) 30;
+}
+
+.subscription__cards-item--active .subscription__cards-link {
+  border: none;
+  color: #ffffff;
+  background: -o-linear-gradient(352.95deg, #ff1553 17.6%, #003eb7 95.31%);
+  background: linear-gradient(97.05deg, #ff1553 17.6%, #003eb7 95.31%);
+}
+
+.subscription__cards-header {
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 29px;
+  color: #102654;
+}
+
+.subscription__cards-subtitle {
+  margin-bottom: 90px;
+  color: #495a7d;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.subscription__cards-price {
+  position: relative;
+  margin-bottom: 55px;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 90px;
+  text-shadow: 0 -15px 3px #c4c4c4;
+  color: #103aae;
+}
+
+.subscription__cards-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 27px 44px;
+  border: 2px solid #102654;
+  color: #102654;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.05em;
 }
 
 .btn {
@@ -1156,7 +1322,7 @@ body main {
   .main-block {
     padding-top: 38px;
     padding-bottom: 81px;
-    background: conic-gradient(from 139.4deg at 20.7% 35.74%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+    background: conic-gradient(from 139.4deg at 20.7% 35.74%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   }
 
   .main-block__header {
@@ -1322,7 +1488,7 @@ body main {
 
   .main-block {
     padding-top: 18px;
-    background: conic-gradient(from 171.43deg at 35.31% 34.22%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+    background: conic-gradient(from 171.43deg at 35.31% 34.22%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   }
 
   .main-block__content {

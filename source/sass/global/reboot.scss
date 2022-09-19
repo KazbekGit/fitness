@@ -21,6 +21,8 @@ html {
   font-family: $ff-placeholder;
   color: $color-default-black;
 
+  scroll-behavior: smooth;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   // оптимизация выравнивания шрифта относительно центра строки
@@ -130,6 +132,10 @@ button,
 [type="reset"],
 [type="submit"] {
   appearance: none;
+}
+
+ul {
+  list-style: none;
 }
 
 ul, p, h1, h2, h3 {

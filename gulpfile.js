@@ -91,6 +91,7 @@ const syncServer = () => {
     index: 'index.html',
     notify: false,
     open: true,
+    browser: 'chrome',
     cors: true,
     ui: false,
   });

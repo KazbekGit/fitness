@@ -1,0 +1,154 @@
+.subscription {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: $color-ghost-white;
+}
+
+.subscription__wrapper {
+}
+
+.subscription__tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 40px;
+}
+
+.subscription__header {
+  margin-bottom: 50px;
+
+  font-family: $ff-bebas;
+  font-size: 49px;
+  line-height: 49px;
+
+  color: $color-sapphire;
+}
+
+.subscription__tabs-list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 20px;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    border-bottom: 2px solid grey;
+  }
+}
+
+.subscription__tabs-item {
+  margin-right: 46px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+
+  color: $color-sapphire-trans-50;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--active {
+    z-index: 2;
+    color: $color-sapphire;
+    border-bottom: 2px solid $color-crimson;
+  }
+}
+
+.subscription__cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+
+  font-family: $ff-roboto;
+}
+
+.subscription__cards-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 65px 73px;
+  margin-right: 36px;
+  margin-bottom: 40px;
+
+  background-color: $color-default-white;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &--active {
+    border: 7px solid;
+    padding: 60px 70px;
+    border-image: linear-gradient(to bottom right, $color-crimson 30%, $color-smalt 51%) 30;
+  }
+}
+
+.subscription__cards-item--active .subscription__cards-link {
+  border: none;
+
+  color: $color-default-white;
+  background: linear-gradient(97.05deg, $color-torch-red 17.6%, $color-cobalt 95.31%);
+}
+
+.subscription__cards-header {
+  margin-bottom: 20px;
+
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 29px;
+
+  color: $color-sapphire;
+}
+
+.subscription__cards-subtitle {
+  margin-bottom: 90px;
+
+  color: $color-chambray;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.subscription__cards-price {
+  position: relative;
+
+  margin-bottom: 55px;
+
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 90px;
+
+  text-shadow: 0 -15px 3px rgb(196, 196, 196);
+
+  color: $color-egyptian-blue;
+}
+
+.subscription__cards-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 27px 44px;
+
+  border: 2px solid $color-sapphire;
+  color: $color-sapphire;
+
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+
+}

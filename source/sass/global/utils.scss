@@ -19,8 +19,10 @@ body {
   font-family: $ff-rouble;
   /* stylelint-disable */
   text-transform: lowercase !important;
-  font-weight: 400 !important;
+  font-weight: 600 !important;
   /* stylelint-enable */
+  font-size: 60px;
+  color: $color-sapphire;
 }
 
 .visually-hidden {
