@@ -23,6 +23,14 @@ body {
   /* stylelint-enable */
   font-size: 60px;
   color: $color-sapphire;
+
+  @include vp-767 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 0em;
+    text-align: left;
+  }
 }
 
 .visually-hidden {
@@ -64,4 +72,9 @@ body {
 .no-transition {
   /* stylelint-disable-next-line */
   transition: none !important;
+}
+
+.second-content,
+.third-content {
+  display: none;
 }
