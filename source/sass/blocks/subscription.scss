@@ -1,16 +1,18 @@
 .subscription {
+  position: relative;
+
   padding-top: 120px;
   padding-bottom: 80px;
   background-color: $color-ghost-white;
 
   @include vp-1199 {
     padding-top: 96px;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
   }
 
   @include vp-767 {
     padding-top: 69px;
-    padding-bottom: 70px;
+    padding-bottom: 43px;
   }
 }
 
@@ -39,9 +41,14 @@
     padding-right: 25px;
   }
 
-  @include vp-1199 {
-    padding-left: 163px;
-    padding-right: 163px;
+  @include vp-1023 {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @include vp-767{
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -51,7 +58,6 @@
   align-items: center;
 
   margin-bottom: 20px;
-  margin-right: 20px;
 
   @include vp-1199 {
     margin-bottom: 25px;
@@ -111,6 +117,10 @@
   margin-right: 46px;
   margin-bottom: 20px;
   padding-bottom: 10px;
+  padding-left: 0;
+  padding-right: 0;
+
+  border: none;
 
   cursor: pointer;
 
@@ -119,8 +129,9 @@
   line-height: 30px;
 
   color: $color-sapphire-trans-50;
+  background-color: transparent;
 
-  &:last-child {
+  &:last-of-type {
     margin-right: 0;
   }
 
@@ -151,12 +162,32 @@
 }
 
 .subscription__cards-list {
+
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: flex-start;
+  z-index: 4;
 
   font-family: $ff-roboto;
+
+  &::after {
+    position: absolute;
+    content: url('../img/plate.png');
+    right: 0;
+    bottom: -230px;
+
+    z-index: 2;
+
+    @include vp-1199 {
+      content: url('../img/plate-tablet.png');
+      bottom: -195px;
+    }
+
+    @include vp-767 {
+      content: "";
+    }
+  }
 }
 
 .subscription__cards-item {
@@ -164,18 +195,24 @@
   flex-direction: column;
   align-items: center;
 
-  padding: 65px 77px;
-  padding-top: 57px;
+  padding: 65px 70px;
+  padding-top: 51px;
   margin-right: 40px;
   margin-bottom: 40px;
 
-  z-index: 2;
+  border: 7px solid transparent;
+
+  z-index: 3;
 
   background-color: $color-default-white;
 
-  &:last-child {
+  &:nth-child(3n) {
     margin-right: 0;
     margin-bottom: 0;
+
+    @include vp-1199 {
+      margin-bottom: 30px;
+    }
   }
 
   @include vp-1365 {
@@ -187,8 +224,10 @@
   }
 
   @include vp-1199 {
-    padding-left: 116px;
-    padding-right: 116px;
+    padding-left: 112px;
+    padding-right: 112px;
+    padding-top: 45px;
+    padding-bottom: 60px;
     width: 100%;
     margin-right: 0;
   }
@@ -196,36 +235,24 @@
   @include vp-767 {
     margin-bottom: 36px;
 
-    padding-bottom: 52px;
-    padding-top: 52px;
-    padding-left: 42px;
-    padding-right: 42px;
-  }
-
-  &--active {
-    border: 7px solid;
-    padding: 65px 70px;
-    padding-top: 45px;
-    border-image: linear-gradient(to bottom right, $color-crimson 30%, $color-smalt 51%) 30;
-
-    @include vp-767 {
-      padding-top: 44px;
-      padding-left: 35px;
-      padding-right: 35px;
-      padding-bottom: 47px;
-    }
+    padding-bottom: 44px;
+    padding-top: 44px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
   &:hover {
-    background-color: $color-pattens-blue;
+    border: 7px solid;
+    border-image: linear-gradient(to bottom right, $color-crimson 30%, $color-smalt 51%) 30;
   }
 }
 
-.subscription__cards-item--active .subscription__cards-link {
+.subscription__cards-item:hover .subscription__cards-link {
   border: none;
-  margin-top: 3px;
-  padding-left: 45px;
-  padding-right: 45px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  padding-left: 44px;
+  padding-right: 44px;
   color: $color-default-white;
   background: linear-gradient(97.05deg, $color-torch-red 17.6%, $color-cobalt 95.31%);
 
@@ -288,11 +315,11 @@
   color: $color-egyptian-blue;
 
   @include vp-1199 {
-    margin-bottom: 33px;
+    margin-bottom: 36px;
   }
 
   @include vp-767 {
-    margin-bottom: 29px;
+    margin-bottom: 30px;
     margin-left: 9px;
 
     font-size: 48px;
@@ -345,6 +372,11 @@
 
   @include vp-1199 {
     width: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
 
   @include vp-767 {
@@ -354,5 +386,4 @@
     letter-spacing: 0.05em;
     text-align: left;
   }
-
 }

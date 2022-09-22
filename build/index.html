@@ -73,43 +73,67 @@
       <div class="container subscription__container">
         <div class="subscription__tabs">
           <p class="subscription__header">Абонементы</p>
-          <ul class="subscription__tabs-list">
-            <li class="subscription__tabs-item subscription__tabs-item--active" data-number="first-content">1 месяц</li>
-            <li class="subscription__tabs-item" data-number="second-content">6 месяцев</li>
-            <li class="subscription__tabs-item" data-number="third-content">12 месяцев</li>
-          </ul>
+          <div class="subscription__tabs-list">
+            <button type="button" class="subscription__tabs-item subscription__tabs-item--active" data-number="first-content" tabindex="0">1 месяц</bu>
+            <button type="button" class="subscription__tabs-item" data-number="second-content" tabindex="0">6 месяцев</bu>
+            <button type="button" class="subscription__tabs-item" data-number="third-content" tabindex="0">12 месяцев</bu>
+          </div>
         </div>
         <ul class="subscription__cards-list">
           <li class="subscription__cards-item">
             <h3 class="subscription__cards-header">С тренером</h3>
             <p class="subscription__cards-subtitle">12 занятий</p>
             <p class="subscription__cards-price first-content">5000 <span class="subscription__cards-price-shadow">5000</span><span class="rouble">i</span></p>
-            <p class="subscription__cards-price second-content">4000 <span class="subscription__cards-price-shadow">4000</span><span class="rouble">i</span></p>
-            <p class="subscription__cards-price third-content">3000 <span class="subscription__cards-price-shadow">3000</span><span class="rouble">i</span></p>
+            <p class="subscription__cards-price second-content hide">4000 <span class="subscription__cards-price-shadow">4000</span><span class="rouble">i</span></p>
+            <p class="subscription__cards-price third-content hide">3000 <span class="subscription__cards-price-shadow">3000</span><span class="rouble">i</span></p>
             <a class="subscription__cards-link" href="blankpage.html" aria-label="Купить абонемент">Купить абонемент</a>
           </li>
-          <li class="subscription__cards-item subscription__cards-item--active">
+          <li class="subscription__cards-item">
             <h3 class="subscription__cards-header">Дневной</h3>
             <p class="subscription__cards-subtitle">с 8:00 до 17:00</p>
             <p class="subscription__cards-price first-content">1700 <span class="subscription__cards-price-shadow">1700</span><span class="rouble">i</span></p>
-            <p class="subscription__cards-price second-content">1600 <span class="subscription__cards-price-shadow">1600</span><span class="rouble">i</span></p>
-            <p class="subscription__cards-price third-content">1500 <span class="subscription__cards-price-shadow">1500</span><span class="rouble">i</span></p>
+            <p class="subscription__cards-price second-content hide">1600 <span class="subscription__cards-price-shadow">1600</span><span class="rouble">i</span></p>
+            <p class="subscription__cards-price third-content hide">1500 <span class="subscription__cards-price-shadow">1500</span><span class="rouble">i</span></p>
             <a class="subscription__cards-link" href="blankpage.html" aria-label="Купить абонемент">Купить абонемент</a>
           </li>
           <li class="subscription__cards-item">
             <h3 class="subscription__cards-header">Полный день</h3>
             <p class="subscription__cards-subtitle">с 8:00 до 22:00</p>
             <p class="subscription__cards-price first-content" >2700 <span class="subscription__cards-price-shadow">2700</span><span class="rouble">i</span></p>
-            <p class="subscription__cards-price second-content">2600 <span class="subscription__cards-price-shadow">1600</span><span class="rouble">i</span></p>
-            <p class="subscription__cards-price third-content">2500 <span class="subscription__cards-price-shadow">1500</span><span class="rouble">i</span></p>
+            <p class="subscription__cards-price second-content hide">2600 <span class="subscription__cards-price-shadow">2600</span><span class="rouble">i</span></p>
+            <p class="subscription__cards-price third-content hide">2500 <span class="subscription__cards-price-shadow">2500</span><span class="rouble">i</span></p>
             <a class="subscription__cards-link" href="blankpage.html" aria-label="Купить абонемент">Купить абонемент</a>
           </li>
         </ul>
       </div>
     </section>
-    <section class="promo"></section>
-    <h2 class="visually-hidden">Промо</h2>
-
+    <section class="promo">
+      <h2 class="visually-hidden">Промо</h2>
+      <div class="container promo__container">
+        <div class="promo__text">
+          <div class="promo__title">
+            <h2 class="promo__text-header">Super games</h2>
+            <div class="promo__date-block">
+              <span class="promo__subtitle promo__subtitle--date">Дата</span>
+              <div class="promo__date">
+                <time datetime="2018-03-07">7</time>
+                <span class="promo__may-year">Марта 2019</span>
+              </div>
+              <div class="promo__time">
+                <span class="promo__subtitle promo__subtitle--time">Время</span>
+                <time datetime="2018-03-07">12:00</time>
+              </div>
+            </div>
+          </div>
+          <div class="promo__description">Ежегодные соревнования по&nbsp;CrossFit</div>
+          <a class="promo__link" href="blankpage.html" aria-label="Заполнить заявку">Заполнить заявку</a>
+        </div>
+        <picture>
+          <source type="image/webp" srcset="img/sumo.webp, img/sumo@2x.webp 2x">
+          <img class="promo__img" src="img/sumo.jpg" srcset="img/sumo@2x.jpg" alt="Сумоист" width="660" height="500">
+        </picture>
+      </div>
+    </section>
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
   </body>
