@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Описание проекта">
     <title>Fitness</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -134,7 +138,147 @@
         </picture>
       </div>
     </section>
-    <script src="js/vendor.min.js"></script>
-    <script src="js/main.min.js"></script>
+    <section class="coaches">
+      <div class="container coaches__container">
+        <div class="coaches__header">Тренеры</div>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide coaches__slide">
+              <picture>
+                <source type="image/webp" srcset="img/coach-1.webp, img/coach-1@2x.webp 2x">
+                <img class="coaches__img" src="img/coach-1.jpg" srcset="img/coach-1@2x.jpg" alt="Тренер Анна Павлова" width="260" height="294">
+              </picture>
+              <span class="coaches__name">Анна Павлова</span>
+              <div class="coaches__info">
+                <header class="coaches__info-header">Анна Павлова</header>
+                <p class="coaches__info-subtitle">CrossFit</p>
+                <ul class="coaches__info-list">
+                  <li class="coaches__info-item">Certified Level 80 Trainer</li>
+                  <li class="coaches__info-item">The best of the best</li>
+                  <li class="coaches__info-item">Опыт — 60 лет</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide coaches__slide">
+              <picture>
+                <source type="image/webp" srcset="img/coach-2.webp, img/coach-2@2x.webp 2x">
+                <img class="coaches__img" src="img/coach-2.jpg" srcset="img/coach-2@2x.jpg" alt="Тренер Алексей Лавров" width="260" height="294">
+              </picture>
+              <span class="coaches__name">Алексей Лавров</span>
+              <div class="coaches__info">
+                <header class="coaches__info-header">Алексей Лавров</header>
+                <p class="coaches__info-subtitle">SpeedReading</p>
+                <ul class="coaches__info-list">
+                  <li class="coaches__info-item">Certified Level AAA Trainer</li>
+                  <li class="coaches__info-item">The Magister</li>
+                  <li class="coaches__info-item">Опыт — 360 лет</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide coaches__slide">
+              <picture>
+                <source type="image/webp" srcset="img/coach-3.webp, img/coach-3@2x.webp 2x">
+                <img class="coaches__img" src="img/coach-3.jpg" srcset="img/coach-3@2x.jpg" alt="Тренер Жим Лёжов" width="260" height="294">
+              </picture>
+              <span class="coaches__name coaches__name--long">Александр Пашков</span>
+              <div class="coaches__info">
+                <header class="coaches__info-header">Александр Пашков</header>
+                <p class="coaches__info-subtitle">CrossFit</p>
+                <ul class="coaches__info-list">
+                  <li class="coaches__info-item">Certified Level 3 Trainer</li>
+                  <li class="coaches__info-item">Победитель чемпионата России по CrossFit</li>
+                  <li class="coaches__info-item">Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide coaches__slide">
+              <picture>
+                <source type="image/webp" srcset="img/coach-4.webp, img/coach-4@2x.webp 2x">
+                <img class="coaches__img" src="img/coach-4.jpg" srcset="img/coach-4@2x.jpg" alt="Тренер Мария Кетова" width="260" height="294">
+              </picture>
+              <span class="coaches__name">Мария Кетова</span>
+              <div class="coaches__info">
+                <header class="coaches__info-header">Мария Кетова</header>
+                <p class="coaches__info-subtitle">CrossBit</p>
+                <ul class="coaches__info-list">
+                  <li class="coaches__info-item">Certified Lady-13 Trainer</li>
+                  <li class="coaches__info-item">Победитель России по CrossFit</li>
+                  <li class="coaches__info-item">Опыт — 26 лет</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide coaches__slide">
+              <picture>
+                <source type="image/webp" srcset="img/coach-3.webp, img/coach-3@2x.webp 2x">
+                <img class="coaches__img" src="img/coach-3.jpg" srcset="img/coach-3@2x.jpg" alt="Тренер Жим Лёжов" width="260" height="294">
+              </picture>
+              <span class="coaches__name">Артур Тягов</span>
+              <div class="coaches__info">
+                <header class="coaches__info-header">Артур Тягов</header>
+                <p class="coaches__info-subtitle">CrossFit</p>
+                <ul class="coaches__info-list">
+                  <li class="coaches__info-item">Certified Level 3 Trainer</li>
+                  <li class="coaches__info-item">Победитель чемпионата России по CrossFit</li>
+                  <li class="coaches__info-item">Опыт — 6 лет</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide coaches__slide">
+              <picture>
+                <source type="image/webp" srcset="img/coach-2.webp, img/coach-2@2x.webp 2x">
+                <img class="coaches__img" src="img/coach-2.jpg" srcset="img/coach-2@2x.jpg" alt="Тренер Алексей Лавров" width="260" height="294">
+              </picture>
+              <span class="coaches__name">Борис Олимпов</span>
+              <div class="coaches__info">
+                <header class="coaches__info-header">Борис Олимпов</header>
+                <p class="coaches__info-subtitle">SpeedReading</p>
+                <ul class="coaches__info-list">
+                  <li class="coaches__info-item">Certified Level AAA Trainer</li>
+                  <li class="coaches__info-item">The Magister</li>
+                  <li class="coaches__info-item">Опыт — 360 лет</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide coaches__slide">
+              <picture>
+                <source type="image/webp" srcset="img/coach-1.webp, img/coach-1@2x.webp 2x">
+                <img class="coaches__img" src="img/coach-1.jpg" srcset="img/coach-1@2x.jpg" alt="Тренер Анна Павлова" width="260" height="294">
+              </picture>
+              <span class="coaches__name">Алиса Становая</span>
+              <div class="coaches__info">
+                <header class="coaches__info-header">Алиса Становая</header>
+                <p class="coaches__info-subtitle">CrossBit</p>
+                <ul class="coaches__info-list">
+                  <li class="coaches__info-item">Certified Lady-13 Trainer</li>
+                  <li class="coaches__info-item">Победитель России по CrossFit</li>
+                  <li class="coaches__info-item">Опыт — 26 лет</li>
+                </ul>
+              </div>
+            </div>
+            <div class="swiper-slide coaches__slide">
+              <picture>
+                <source type="image/webp" srcset="img/coach-4.webp, img/coach-4@2x.webp 2x">
+                <img class="coaches__img" src="img/coach-4.jpg" srcset="img/coach-4@2x.jpg" alt="Тренер Мария Кетова" width="260" height="294">
+              </picture>
+              <span class="coaches__name">Олеся Фитнес</span>
+              <div class="coaches__info">
+                <header class="coaches__info-header">Олеся Фитнес</header>
+                <p class="coaches__info-subtitle">CrossBit</p>
+                <ul class="coaches__info-list">
+                  <li class="coaches__info-item">Certified Lady-13 Trainer</li>
+                  <li class="coaches__info-item">Победитель России по CrossFit</li>
+                  <li class="coaches__info-item">Опыт — 26 лет</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <script src="js/vendor.min.js" type="module"></script>
+    <script src="js/main.min.js" type="module"></script>
   </body>
 </html>

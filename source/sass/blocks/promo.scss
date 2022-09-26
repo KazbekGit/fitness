@@ -42,6 +42,11 @@
     padding-right: 10px;
   }
 
+  @include vp-1199 {
+    padding-left: 43px;
+    padding-right: 43px;
+  }
+
   @include vp-767 {
     flex-direction: column;
     align-items: center;
@@ -63,7 +68,7 @@
   background-color: $color-torch-red;
 
   @include vp-1199 {
-    flex-basis: 55%;
+    flex-basis: 58%;
 
     flex-shrink: 2;
 
